@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>Map</title>
+  <meta charset="utf-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163877668-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163877668-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
+ maximum-scale=1.0, minimum-scale=1.0"
+</head>
+<body>
+<div id="map" style="width:500px;height:400px;"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=731e9a402a02d699254e902cdd2bf24f"></script>
+<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
+</body>
+</html>
