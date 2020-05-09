@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+  <title>메인 페이지</title>
+  <link rel="shortcut icon" href="/img/img.png">
+  <meta charset="utf-8">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="859750467264-ev4ru9q2tndvfe9htvq7boumht3i6oun.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <style>
+    .link {
+      text-decoration:none
+    }
+    div {
+      text-align: center;
+    }
+  </style>
+  <body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
+
+<script language=JavaScript>function click() {if ((event.button==2) || (event.button==2)) {alert('허용되지 않는 작업입니다.');}}document.onmousedown=click// --></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163877668-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163877668-1');
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
+ maximum-scale=1.0, minimum-scale=1.0"
+</head>
+<body>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <a href="#" onclick="signOut();">구글 계정 로그아웃</a>
+ <script>
+   function onSignIn(googleUser) {
+     // Useful data for your client-side scripts:
+     var profile = googleUser.getBasicProfile();
+     console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+     console.log('Full Name: ' + profile.getName());
+     console.log('Given Name: ' + profile.getGivenName());
+     console.log('Family Name: ' + profile.getFamilyName());
+     console.log("Image URL: " + profile.getImageUrl());
+     console.log("Email: " + profile.getEmail());
+
+     // The ID token you need to pass to your backend:
+     var id_token = googleUser.getAuthResponse().id_token;
+     console.log("ID Token: " + id_token);
+   }
+   function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                        console.log('User signed out.');
+                    });
+                auth2.disconnect();
+            }
+ </script>
+ <script>
+     (function(d) {
+ var options = {
+ partnerId : 'W4YTZT', // 톡톡 파트너계정 아이디
+ imageUrl : '/img/talk_ico.png', // 버튼아이콘 URL (첨부파일)
+      size : 56, // 버튼 사이즈. PC에서는 80, 모바일에서는 56 권장
+ right : 20, // 버튼 위치. 화면 오른쪽에서의 거리
+ bottom : 20, // 버튼 위치. 화면 아래에서의 거리
+ circle : true, // 버튼 둥글게
+ shadow : true // 그림자 효과
+ }
+ var img = document.createElement('img');
+ img.src = options.imageUrl;
+ img.width = options.size ;
+ img.height = options.size;
+ img.style.bottom = options.bottom + 'px';
+ img.style.right = options.right + 'px';
+ img.style.position = 'fixed';
+ img.style.zIndex = 99999;
+ img.style.cursor = 'pointer';
+ img.style.borderRadius = options.circle ? '50%' : '';
+ img.style.boxShadow = options.shadow ? '0 0 4px rgba(0,0,0,.16), 0 4px 4px rgba(0,0,0,.24)' : '';
+ img.onclick = function(e) {
+ window.open('https://talk.naver.com/' + options.partnerId + '?ref=' + encodeURIComponent(location.href) + '#nafullscreen', 'talktalk', 'scrollbars=1, resizable=1, width=486, height=745');
+ }
+ d.getElementsByTagName('html')[0].appendChild(img);
+ })(document);
+ </script>​​
+<h1>메인 페이지</h1>
+<style>
+.saw {
+  color: red;
+}
+</style>
+</body><br><br><br>
+<p> </p>
+<p>야간 모드를 사용하여 눈의 피로도를 줄여보세요.</p>
+   <input type="button" value="야간" onclick="
+     var target = document.querySelector('body');
+     if(this.value === '야간'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = '주간';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = '야간';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }
+    }
+  ">
+    <br><br><br><br><br>
+<p>테스트 기능</p>
+ <input type="button" value="핑크" onclick="
+ document.querySelector('body').style.backgroundColor='pink';
+ document.querySelector('body').style.color='black';
+ ">
+ <input type="button" value="노랑" onclick="
+ document.querySelector('body').style.backgroundColor='yellow';
+ document.querySelector('body').style.color='black';
+ "><br><br><br>
+
+<p>글꼴 색상 변경 (테스트 기능)</p>
+ <input type="button" value="블랙(기본)" onclick="
+ document.querySelector('body').style.color='black';
+ ">
+ <input type="button" value="노랑" onclick="
+ document.querySelector('body').style.color='yellow';
+ ">
+ <input type="button" value="그린" onclick="
+ document.querySelector('body').style.color='green';
+ ">
+ <input type="button" value="블루" onclick="
+ document.querySelector('body').style.color='blue';
+ "><br><br><br><br>
+<ui>
+<span style="font-size:25px">1. 게시판</a></span><br>
+<p><sapn style="font-size:25px"><a href="2.html">2. 댓글</a></span><br>
+<p><sapn style="font-size:25px"><a href="3.html">3. 회원가입</a></span><br>
+<p><sapn style="font-size:25px"><a href="4.html">4. 블로그</a></span>
+  <input type="button" value="블로그 안내" onclick="alert('준비 중인 기능입니다.')"><br>
+<p><span style="font-size:25px"><a href="5.html" class="saw">5. 실시간 채팅</a></span>
+<p><sapn style="font-size:25px"><a href="map.html">6. 지도</a></span>
+<p><span style="font-size:25px"><a href="/shop/index.php">7. 테스트 쇼핑물</a></span>
+</ui><br><br><br><br><br>
+
+
+
+<p>2020-04-20 오후 10시 12분 업데이트 내용: 일부 HTML 안의 CSS 내용을 CSS 파일로 대체</p>
+<p>2020-04-21 오후 10시 06분 업데이트 내용: 테스트 개인정보처리방침 페이지 추가</p>
+<p>2020-04-22 오후 09시 25분 업데이트 내용: 개인정보처리방침 하이퍼링크를 가운데로 정렬.</p>
+<p>2020-04-23 오후 10시 01분 업데이트 내용: 웹 배경화면 야간, 주간모드 추가 | 다른 배경화면 색 추가</p>
+<p>2020-04-24 오후 10시 15분 업데이트 내용: 마우스 오른쪽 메뉴. 드래그 선택복사 금지 추가,<br>
+  오른쪽 마우스 클릭시, 브라우저에서 이벤트(팝업)이 표시되도록 변경</p>
+<p>2020-04-27 오후 09시 50분 업데이트 내용: 야간 / 주간 버튼을 하나로 통합하여 깔끔하게<br>
+  보이도록 변경</p>
+<p>2020-04-30 오전 11시 40분 업데이트 내용: 구글 로그인, 로그아웃 레이아웃 추가</p>
+<p>2020-04-30 오후 09시 17분 업데이트 내용: HTML 타이틀 아이콘 적용</P>
+<p>2020-05-04 오후 09시 33분 업데이트 내용: 메인 화면에 네이버 톡톡 추가</p>
+<br><br><br><br><br><br><br><br><p>최종 업데이트 날짜: 2020-05-04 오후 09시 33분</p>
+
+
+<hr style="border:1px color=silver;" width="100%">
+<div><a href="개인정보처리방침.html" class="link">개인정보처리방침 (테스트, 효력없음)</a></div><br><br><br>
+</html>

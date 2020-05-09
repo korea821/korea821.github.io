@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <title>회원가입</title>
+  <meta charset="utf-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163877668-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163877668-1');
+  </script>
+</head>
+<body>
+<p>
+  회원 가입 페이지입니다.
+</P>
+<form name="registerform" method="post" enctype="multipart/form-data" action="./register">
+        <div class="fieldlabel"><label for="userId">아이디</label></div>
+        <div class="formfield"><input type="text" id="userId" name="userId" maxlength="20" value=""></div>
+        <div class="fieldlabel"><label for="userPw">패스워드</label></div>
+        <div class="formfield">
+<input type="password" id="userPw" name="userpPw" maxlength="20" autocomplete="off">
+</div>
+        <div class="fieldlabel"><label for="userPwCheck">패스워드확인</label></div>
+        <div class="formfield">
+<input type="password" id="userPwCheck" name="userPwCheck" maxlength="20" autocomplete="off">
+</div>
+        <div class="fieldlabel"><label for="nickName">닉네임</label></div>
+        <div class="formfield"><input type="text" id="nickName" name="nickName" maxlength="20" value=""></div>
+
+        <div class="fieldlabel"><label for="email01">이메일</label></div>
+        <div class="formfield"><input type="text" id="email01" name="email01" size="20" maxlength="20"
+             value="" autocomplete="off"><span>@</span>
+            <input id="email02" name="email02" list="domains" placeholder="도메인입력/선택">
+            <datalist id="domains">
+                <option value="naver.com">
+                <option value="daum.net">
+                <option value="gmail.com">
+                <option value="yahoo.co.kr">
+            </datalist>
+        </div>
+        <div class="fieldlabel"><label>이메일수신</label></div>
+        <div class="formfield">
+            <input type="radio" name="emailYn" value="Y" checked>수신
+            <input type="radio" name="emailYn" value="N">미수신
+        </div>
+        <div class="fieldlabel"><label for="profile">프로필사진</label></div>
+        <div class="formfield">
+            <input type="file" id="profile" name="profile" required>
+        </div>
+        <div class="btnfield">
+            <input type="submit" value="회원가입">
+        </div>
+    </form>
+  </body>
+  </html>
