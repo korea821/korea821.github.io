@@ -7,6 +7,34 @@
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="859750467264-ev4ru9q2tndvfe9htvq7boumht3i6oun.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+  function nightDatHandler(night){
+    var target = document.querySelector('body');
+    if(night.value === '야간'){
+     target.style.backgroundColor = 'black';
+     target.style.color = 'white';
+     night.value = '주간';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       alist[i].style.color = 'powderblue';
+       i = i + 1;
+     }
+   } else {
+     target.style.backgroundColor = 'white';
+     target.style.color = 'black';
+     night.value = '야간';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       alist[i].style.color = 'blue';
+       i = i + 1;
+     }
+   }
+ }
+  </script>
   <style>
     .link {
       text-decoration:none
@@ -94,31 +122,8 @@
 </body><br><br><br>
 <p> </p>
 <p>야간 모드를 사용하여 눈의 피로도를 줄여보세요.</p>
-   <input type="button" value="야간" onclick="
-     var target = document.querySelector('body');
-     if(this.value === '야간'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = '주간';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = 'powderblue';
-        i = i + 1;
-      }
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value = '야간';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = 'blue';
-        i = i + 1;
-      }
-    }
+   <input id='night_day' type="button" value="야간" onclick="
+     nightDatHandler(this);
   ">
     <br><br><br><br><br>
 <p>테스트 기능</p>
@@ -156,7 +161,7 @@
 </ui>
 <br><br><br>
 <div><sapn style="font-size:15px"><a href="업데이트.html">웹사이트 업데이트 내용 보기</a></div>
-<p>최종 업데이트 날짜: 2020-05-08 오후 09 31분</p>
+<p>최종 업데이트 날짜: 2020-05-10 오후 08 42분</p>
 
 
 <hr style="border:1px color=silver;" width="100%">
