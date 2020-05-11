@@ -7,35 +7,6 @@
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="859750467264-ev4ru9q2tndvfe9htvq7boumht3i6oun.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script>
-  function LinksSetColor(color){
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      alist[i].style.color = color;
-      i = i + 1;
-    }
-  }
-  function BodySetColor(color){
-    document.querySelector('body').target.style.color = color;
-  }
-  function nightDatHandler(night){
-    var target = document.querySelector('body');
-    if(night.value === '야간'){
-     target.style.backgroundColor = 'black';
-     BodySetColor('white');
-     night.value = '주간';
-
-     LinksSetColor('powderblue');
-   } else {
-     target.style.backgroundColor = 'white';
-     BodySetColor('white');
-     night.value = '야간';
-
-     LinksSetColor('blue');
-   }
- }
-  </script>
   <style>
     .link {
       text-decoration:none
@@ -56,6 +27,34 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-163877668-1');
+</script>
+<script> // 야간모드 태그
+function nigthDayHandler(night){
+  var target = document.querySelector('body');
+  if(night.value === '야간'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    night.value = '주간';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = 'powderblue';
+      i = i + 1;
+    }
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    night.value = '야간';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(1 < alist.length){
+      alist[i].style.color = 'blue';
+      i = i + 1;
+    }
+  }
+}
 </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
  maximum-scale=1.0, minimum-scale=1.0"
@@ -124,9 +123,9 @@
 <p> </p>
 <p>야간 모드를 사용하여 눈의 피로도를 줄여보세요.</p>
    <input id='night_day' type="button" value="야간" onclick="
-     nightDatHandler(this);
+     nigthDayHandler(this);
   ">
-    <br><br><br><br><br>
+<br><br><br>
 <p>테스트 기능</p>
  <input type="button" value="핑크" onclick="
  document.querySelector('body').style.backgroundColor='pink';
