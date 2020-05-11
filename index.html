@@ -8,30 +8,31 @@
   <meta name="google-signin-client_id" content="859750467264-ev4ru9q2tndvfe9htvq7boumht3i6oun.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script>
+  function LinksSetColor(color){
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = color;
+      i = i + 1;
+    }
+  }
+  function BodySetColor(color){
+    document.querySelector('body').target.style.color = color;
+  }
   function nightDatHandler(night){
     var target = document.querySelector('body');
     if(night.value === '야간'){
      target.style.backgroundColor = 'black';
-     target.style.color = 'white';
+     BodySetColor('white');
      night.value = '주간';
 
-     var alist = document.querySelectorAll('a');
-     var i = 0;
-     while(i < alist.length){
-       alist[i].style.color = 'powderblue';
-       i = i + 1;
-     }
+     LinksSetColor('powderblue');
    } else {
      target.style.backgroundColor = 'white';
-     target.style.color = 'black';
+     BodySetColor('white');
      night.value = '야간';
 
-     var alist = document.querySelectorAll('a');
-     var i = 0;
-     while(i < alist.length){
-       alist[i].style.color = 'blue';
-       i = i + 1;
-     }
+     LinksSetColor('blue');
    }
  }
   </script>
