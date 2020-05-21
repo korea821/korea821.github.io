@@ -8,16 +8,10 @@
   <meta name="google-signin-client_id" content="859750467264-ev4ru9q2tndvfe9htvq7boumht3i6oun.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <style>
-    .link {
-      text-decoration:none
-    }
-    div {
+    .center {
       text-align: center;
     }
   </style>
-  <body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
-
-<script language=JavaScript>function click() {if ((event.button==2) || (event.button==2)) {alert('허용되지 않는 작업입니다.');}}document.onmousedown=click// --></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163877668-1"></script>
@@ -28,7 +22,7 @@
 
   gtag('config', 'UA-163877668-1');
 </script>
-<script> // 야간모드 태그
+<script> // 야간모드
 function nigthDayHandler(night){
   var target = document.querySelector('body');
   if(night.value === '야간'){
@@ -61,6 +55,52 @@ function nigthDayHandler(night){
 </head>
 <body>
   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <style> /* 메인페이지 상단 디자인*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #52565e;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+
+  <div class="header">
+    <h2>메인페이지</h2>
+  </div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+</div>
   <a href="#" onclick="signOut();">구글 계정 로그아웃</a>
  <script>
    function onSignIn(googleUser) {
@@ -85,6 +125,7 @@ function nigthDayHandler(night){
                 auth2.disconnect();
             }
  </script>
+
  <script>
      (function(d) {
  var options = {
@@ -113,13 +154,12 @@ function nigthDayHandler(night){
  d.getElementsByTagName('html')[0].appendChild(img);
  })(document);
  </script>​​
-<h1>메인 페이지</h1>
 <style>
 .saw {
   color: red;
 }
 </style>
-</body><br><br><br>
+<br><br><br>
 <p> </p>
 <p>야간 모드를 사용하여 눈의 피로도를 줄여보세요.</p>
    <input id='night_day' type="button" value="야간" onclick="
@@ -150,20 +190,59 @@ function nigthDayHandler(night){
  document.querySelector('body').style.color='blue';
  "><br><br><br><br>
 <ui>
-<span style="font-size:25px">1. 게시판</a></span><br>
+<p><sapn style="font-size:25px">블로그 가기</sapn><br>
 <p><sapn style="font-size:25px"><a href="2.html">2. 댓글</a></span><br>
 <p><sapn style="font-size:25px"><a href="3.html">3. 회원가입</a></span><br>
-<p><sapn style="font-size:25px"><a href="4.html">4. 블로그</a></span>
-  <input type="button" value="블로그 안내" onclick="alert('준비 중인 기능입니다.')"><br>
+<p><sapn style="font-size:25px"><a href="4.html">4. 블로그</a></span><br>
 <p><span style="font-size:25px"><a href="5.html" class="saw">5. 실시간 채팅</a></span>
 <p><sapn style="font-size:25px"><a href="map.html">6. 지도</a></span>
 <p><span style="font-size:25px"><a href="/shop/index.php">7. 테스트 쇼핑물</a></span>
 </ui>
 <br><br><br>
-<div><sapn style="font-size:15px"><a href="업데이트.html">웹사이트 업데이트 내용 보기</a></div>
-<p>최종 업데이트 날짜: 2020-05-11 오후 09 20분</p>
+<div class="center"><sapn style="font-size:15px"><a href="업데이트.html">웹사이트 업데이트 내용 보기</a></div>
+<p>최종 업데이트 날짜: 2020-05-21 오후 09 20분</p>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
 
 
-<hr style="border:1px color=silver;" width="100%">
-<div><a href="개인정보처리방침.html" class="link">개인정보처리방침 (테스트, 효력없음)</a></div><br><br><br>
+/* Style the top navigation bar */
+.bar {
+  overflow: hidden;
+  background-color: #00205b;
+}
+
+/* Style the topnav links */
+.bar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.bar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+<div class="bar">
+  <a> </a>
+</div>
+<link rel="stylesheet" href="하단.css">
+<div class="w3-container w3-green">
+  <h2>하단바 색상 테스트 중</h2>
+  <div class="center"><sapn style="font-size:15px"><a href="업데이트.html">웹사이트 업데이트 내용 보기</a></div>
+  <div class="center"><a href="개인정보처리방침.html" class="link">개인정보처리방침 (테스트, 효력없음)</a></div>
+  <div><a href="">다국어 지원 예정</a></div><br><br>
+</div>
+</body>
 </html>
