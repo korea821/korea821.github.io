@@ -4,6 +4,11 @@
   <title>메인 페이지</title>
   <link rel="shortcut icon" href="/img/img.png">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
+ maximum-scale=1.0, minimum-scale=1.0" />
+</head>
+  <link rel="stylesheet" href="color.css">
+  <link rel="stylesheet" href="color1.css">
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="859750467264-ev4ru9q2tndvfe9htvq7boumht3i6oun.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -50,11 +55,8 @@ function nigthDayHandler(night){
   }
 }
 </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
- maximum-scale=1.0, minimum-scale=1.0"
 </head>
 <body>
-  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
   <style> /* 메인페이지 상단 디자인*/
 * {
   box-sizing: border-box;
@@ -101,6 +103,8 @@ body {
 <div class="topnav">
   <a href="#">Link</a>
 </div>
+
+<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
   <a href="#" onclick="signOut();">구글 계정 로그아웃</a>
  <script>
    function onSignIn(googleUser) {
@@ -200,7 +204,7 @@ body {
 </ui>
 <br><br><br>
 <div class="center"><sapn style="font-size:15px"><a href="업데이트.html">웹사이트 업데이트 내용 보기</a></div>
-<p>최종 업데이트 날짜: 2020-05-21 오후 09 20분</p>
+<p>최종 업데이트 날짜: 2020-05-22 오후 09 12분</p>
 
 <style>
 * {
@@ -237,12 +241,12 @@ body {
 <div class="bar">
   <a> </a>
 </div>
-<link rel="stylesheet" href="하단.css">
-<div class="w3-container w3-green">
-  <h2>하단바 색상 테스트 중</h2>
+<div class="w3-container w3-flat-turquoise">
+  <h3>하단바 색상 테스트 중</h3>
   <div class="center"><sapn style="font-size:15px"><a href="업데이트.html">웹사이트 업데이트 내용 보기</a></div>
   <div class="center"><a href="개인정보처리방침.html" class="link">개인정보처리방침 (테스트, 효력없음)</a></div>
-  <div><a href="">다국어 지원 예정</a></div><br><br>
+  <u>다국어 지원 예정<u>
+<br><br>
 </div>
 </body>
 </html>
