@@ -3,6 +3,7 @@
 <head>
   <title>댓글</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163877668-1"></script>
   <script>
@@ -16,12 +17,30 @@
  maximum-scale=1.0, minimum-scale=1.0" />
 </head>
 <body>
+
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">닫기 &times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">홈으로 이동</a>
+  <a href="#" class="w3-bar-item w3-button">준비 중</a>
+  <a href="#" class="w3-bar-item w3-button">준비 중</a>
+  <u>준비 중인 기능입니다.</u>
+</div>
+
+<div id="main">
+
+<div class="w3-teal">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h3>댓글</h3>
+  </div>
+</div>
+
 <p>
   소통할 수 있는 댓글 기능입니다.<br>
   게시한 댓글은 GitHub 오픈 소스에<br>
   저장되니 개인정보를 게시하지 마세요.
-</P>
-</body>
+</p>
 <br><br><br>
 
 <div id="lv-container" data-id="city" data-uid="MTAyMC80OTYzMC8yNjEyMQ==">
@@ -61,4 +80,18 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+</body>
 </html>

@@ -6,9 +6,27 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
   maximum-scale=1.0, minimum-scale=1.0" />
   <link rel="stylesheet" href="css/updata.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <div class="w3-animate-left">
  </head>
  <body>
+   <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+   <button class="w3-bar-item w3-button w3-large"
+   onclick="w3_close()">닫기 &times;</button>
+   <a href="index.html" class="w3-bar-item w3-button">홈으로 이동</a>
+   <a href="#" class="w3-bar-item w3-button">준비 중</a>
+   <a href="#" class="w3-bar-item w3-button">준비 중</a>
+   <u>준비 중인 기능입니다.</u>
+ </div>
+
+ <div id="main">
+
+ <div class="w3-teal">
+   <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+   <div class="w3-container">
+     <h3>업데이트 내역</h3>
+   </div>
+ </div>
    <div class="w3-container">
    <div><span style="font-size:25px">웹사이트 업데이트 내용</span></div><br>
    <div class="w3-panel w3-border w3-round-large">2020-04-20 오후 10시 12분 업데이트 내용: 일부 HTML 안의 CSS 내용을 CSS 파일로 대체</div>
@@ -33,5 +51,19 @@
      애니메이션 일부, 추가 변경 | 업데이트 내용 페이지에도 애니메이션 추가</div>
    <div class="w3-panel w3-border w3-round-large">2020-06-11 오후 10시 17분 업데이트 내용: 움직이는 택스트 추가</div>
    <div class="w3-panel w3-border w3-round-large">2020-06-16 오후 10시 15분 업데이트 내용: 메인페이지에 사이드바 추가</div>
+   <div class="w3-panel w3-border w3-round-large">2020-06-18 오후 10시 10분 업데이트 내용: 웹사이트 디자인을 통일성 있게 변경</div>
+   <script>
+   function w3_open() {
+     document.getElementById("main").style.marginLeft = "25%";
+     document.getElementById("mySidebar").style.width = "25%";
+     document.getElementById("mySidebar").style.display = "block";
+     document.getElementById("openNav").style.display = 'none';
+   }
+   function w3_close() {
+     document.getElementById("main").style.marginLeft = "0%";
+     document.getElementById("mySidebar").style.display = "none";
+     document.getElementById("openNav").style.display = "inline-block";
+   }
+   </script>
   </body>
 </html>
